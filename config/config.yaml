@@ -1,5 +1,5 @@
 data_path:
-  train_data : "/prtk/Documents/Isha/Deployment/deployment_tutorial/data/train"
-  test_data: "/prtk/Documents/Isha/Deployment/deployment_tutorial/data/test"
+  train_data : /prtk/Documents/Isha/Deployment/deployment_tutorial/data/train/article1.txt
+  test_data: /prtk/Documents/Isha/Deployment/deployment_tutorial/data/test
 
 sentence_num: 3
