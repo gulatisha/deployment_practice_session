@@ -73,4 +73,4 @@ class Summarizer_doc:
 
 
 summarize_obj = Summarizer_doc()
-summarize_obj.find_summary()
+summary = summarize_obj.find_summary()
