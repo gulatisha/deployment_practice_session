@@ -1,14 +1,14 @@
 import yaml 
 from preprocessor import Preprocessor_doc
+import numpy as np
 
 class Summarizer_doc:
     """
-    Module for summarization
+    Module for summarization"""
 
-    """
     def __init__(self):
         with open('../config/config.yaml','r',encoding='utf-8') as fl:
-            self.config = yaml.load(fl) 
+            self.config = yaml.load(fl)
 
     def load_docs(self,file_path):
         """
@@ -46,11 +46,10 @@ class Summarizer_doc:
 
     def find_sent_length_array(self,sentences):
         return [self.find_sent_length(sent) for sent in sentences]
-        pass
 
     def find_top_sentence(self,sent_lengths,sentences):
         sorted_idx = np.argsort(sent_lengths)
-        top3_idx = sortedIdx[-3:]
+        top3_idx = sorted_idx[-3:]
         top_3_sentences = [sentences[i] for i in top3_idx]
         return top_3_sentences
 
@@ -68,8 +67,9 @@ class Summarizer_doc:
         first_sent,rest_sent = self.group_sentences(sentences)
         sent_lengths = self.find_sent_length_array(rest_sent)
         top_3_sentences = self.find_top_sentence(sent_lengths,rest_sent)
-        all_sentences = [first_sent] + [top_3_sentences]
+        all_sentences = [first_sent] + top_3_sentences
         summary = ''.join(all_sentences)
+        return summary
 
 
 summarize_obj = Summarizer_doc()
