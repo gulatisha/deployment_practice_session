@@ -7,7 +7,7 @@ class Summarizer_doc:
     Module for summarization"""
 
     def __init__(self):
-        with open('/Users/prtk/Documents/Isha/Deployment/deployment_tutorial/config/config.yaml','r',encoding='utf-8') as fl:
+        with open('../config/config.yaml','r',encoding='utf-8') as fl:
             self.config = yaml.load(fl)
 
     def load_docs(self,file_path):
