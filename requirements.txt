@@ -4,4 +4,4 @@ nltk
 sklearn
 flask
 seaborn
-yaml
+pyyaml
