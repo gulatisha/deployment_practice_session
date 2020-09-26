@@ -2,5 +2,5 @@ pandas
 numpy
 nltk
 sklearn
-
-
+flask
+seaborn
