@@ -10,4 +10,4 @@ def find_summary():
     summary = summarize_obj.find_summary()
     return summary
 
-app.run('localhost',port = 8083)
+app.run('0.0.0.0',port = 80)
